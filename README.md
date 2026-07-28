@@ -49,7 +49,6 @@ X-axis: 77.51793416649247
 Y-axis: -79.89567180772134
 Z-axis: -96.15395469849808
 ==============================
-
 ```
 
 **C++ Processing Engine (`./processing_engine`):**
@@ -81,7 +80,6 @@ The Python script requires the `pyzmq` package to interface with ZeroMQ. The `ti
 ```bash
 # Install the ZeroMQ Python binding
 pip install pyzmq
-
 ```
 
 #### 2. Building the C++ Engine
@@ -96,7 +94,6 @@ cd build/
 # Generate Makefiles and compile the engine
 cmake ..
 make
-
 ```
 
 #### 3. Running the Pipeline
@@ -108,7 +105,6 @@ For the best experience, run these in two separate terminal sessions. It is reco
 ```bash
 cd build/
 ./processing_engine
-
 ```
 
 **Terminal 2 (Start the Sensor Stream):**
@@ -117,5 +113,4 @@ cd build/
 cd scripts/
 # Optionally pass the delay between packets in seconds (e.g., 0.001 for 1000 Hz)
 python mock_sensor.py 0.001
-
 ```
