@@ -57,7 +57,8 @@ def run_sensor():
 			# total 32 byte
 			payload = struct.pack('<dddd', current_time, *generate_random_axis_data())
 
-			socket.send(payload)
+			topic = b"3Dsensor"
+			socket.send_multipart([topic, payload])
 			msg_count += 1
 
 			time.sleep(sleep_time)
